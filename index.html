@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="static/styles/style.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+
+
+
+        <div class="header">
+            <img class="div-complite" src="static/images/Имена контейнеров.jpg"
+                alt="Картинка блоки div расположение и имена">
+                <div>
+                    <h3>Вставка картинки из поисковика- глобального источника</h3>
+
+                    <div>
+                        <img src="https://www.promowebcom.by/upload/medialibrary/9fc/m26xyqmo28vvzza2saeyy1sv5s27o7oy.png" alt="Картинка seo в html ">
+
+
+                    </div>
+                    <p>Забить в Поиске картинку -> Нажать правой клавишей мышки-> выбрать в меню -Скопировать URL картинки;
+                        В html записываем тег img  и помещаем туда адресс к изображению.
+                    </p>
+                    <p>
+                        Чтобы картинка поместилась создаём div-> помещаем в него изображение-> маштабируем по ширине контейнер( .header>div>div {
+                        width: 100%-это 100% от ширины родительского контейнера (он у нас узкий)-> Тоже самое делаем с картинкой -.header>div>div>img {
+                        width: 100%;
+                        }- оно в свою очень отмаштабируется по родительскому контейнеру- идеально впишется в ширину бокового блока.
+                    </p>
+
+
+                </div>
+
+
+            <h2>Боковая навигацонная панель</h2>
+            <p>Будет вторым контейнером, который находится рядом с тегом div , содержащим контент и нав панель.</p>
+            <p>
+                Надо чтоб эта боковая панель находилась с контентом слева.
+            </p>
+            <ol>
+                <li>Дадим имена боковой панели.header и второму div c контентом и нав панелью .section </li>
+                <li> Эти теги надо разместить горизонтально, помним что эти теги блочные теги. Надо Область на экране
+                    разделить вертикально Для этого надо сделать ещё один Div , помещаем их в самый главный контейнер -
+                    даём ему идентификатор .div class="page"
+                <li>
+                    Обращаемся к page делаем из него display: flex, расположения оставляем по умолчанию :rov он
+                    разместит элементы один за другим по горизонтали.
+                </li>
+                <li>2.46.01 Обращаемся к header записываем ширину в % .На боковую навигационную панель выделим 14%
+                    <p>.header {
+                        width: 14%;</p>
+                    На блок с нав и контентом -блок div class="section"- выделим ширину 86 % -Отдельно: 86%;
+
+                </li>
+                <li>Чтоб сделать отступ по краям запишим не 86% в section а меньше 82% и останентся нейчтённых 4%- в css
+                    в page свойство записываем <span> jastify-content% center = это разместит контейнеры по центру а не
+                        учтёттые проценты добавятся по краю</span> </li>
+
+            </ol>
+            <div>
+                <h4>Размещение Элементов боковой панели (Будет 3 блока ссылок)</h4>
+                <p>создаёмм с помощью ol и li списки. Лучше скопировать где-то в блоке часть какого-то списка не важно
+                    ol или ul всё равно лишнее уберём, там будут уже заглушки или ссылки- меняем всё на актуальное .
+                    Убираем нумерацию,поубирать подчёркивание если надо , добавить в кписку что- то если надо.
+                    <span>Если скопировали без какого-то закрывающего тега, можно просто поставть < - и вылезет
+                            подсказка что надо вставить . </span>
+                </p> . Для того чтоб выделить текс в какой-то тег _ надо <span>использовать горячие клавиши ( ранее
+                    установленные)-выделив текс и нажав <span>Control+W появится всплывающее окно</span>->нажмём тег а и
+                    всё обернёться в тег а .</span>
+                <p> В css обращаемся к header:
+                <p>.header>div>ol {</p>
+                <p>list-style: none- убираем нумерацию;</p>
+                <p>border-bottom-style: solid;-добавим нижнее подчёркивание ; border-width: 0.5px- добавляем ширину
+                    подчёркивания</p>
+                </p>
+                У списка есть боковые отступы - это надо исправить. Обращаемся к списку ставим margin: 10px
+                чтобы граница контейнера сдвинулась ниже padding: 0 и padding-bottom: 10px;
+                <ol>
+                    <li><a href="#">кнопака2</a></li>
+                    <li><a href="#">кнопака3</a></li>
+                    <li><a href="#">кнопака4</a></li>
+                    <li><a href="#">кнопака5</a></li>
+
+
+                </ol>
+                Скопируем и продублируем блоки списков ( не меняя внутри текст ). Поменяем текст внутри позже
+                <ol>
+                    <li><a href="#">кнопака2</a></li>
+                    <li><a href="#">кнопака3</a></li>
+                    <li><a href="#">кнопака4</a></li>
+                    <li><a href="#">кнопака5</a></li>
+                
+                
+                </ol>
+                <ol>
+                    <li><a href="#">кнопака2</a></li>
+                    <li><a href="#">кнопака3</a></li>
+                    <li><a href="#">кнопака4</a></li>
+                    <li><a href="#">кнопака5</a></li>
+                
+                
+                </ol>
+            </div>
+        </div>
+
+        <div>
+        </div>
+
+
+        <div class="section">
+
+            <div class="nav-conteiner">
+                <nav>
+                    <ul>
+                        <li>ПЕРВАЯ КНОПКА </li>
+                        <li>ВТОРАЯ КНОПКА</li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul>
+                        <li><a href="#">кнопака1
+                                <p> Создание кнопки nav-conteiner>nav>ul>li>a {
+                                    display: block;
+                                    padding: 10px;
+                                    border-style: solid;
+                                    border-width: 0.5px;
+                                    }</p>
+                            </a></li>
+                        <li><a href="#">кнопака2</a></li>
+                        <li><a href="#">кнопака3</a></li>
+                        <li><a href="#">кнопака4</a></li>
+                        <li><a href="#">кнопака5</a></li>
+                        <input type="text" placeholder="Поиск">
+                    </ul>
+                </nav>
+            </div>
+            <div class="text-page">
+                <p>
+                    Чтоб текст не сливался с соседним контейнером применим внутренний padding-left :15px . Обратимся к
+                    этому div создав класс text-page
+                </p>
+
+                <p>Навигационная панель и контент находятся отдельно друг от друга в тегах div. Создадим для них
+                    совместный div. Выделяем ALT контент и нав панель и помещаем в тег div </p>
+                <h2> Навигационная панель</h2>
+                <div>
+                    <p>Если кнопки есть слево и справа, для того чтоб сделать пространство между ними . Отдельными nav и
+                        списками оформить. </p>
+                </div>
+                <ol>
+                    <li> Подписать в сss блок (закоментировать через com+/-Верхняя нав панель) </li>
+                    <li>
+                        Навигационная модель должна быть в отдельном блоке div . Навигационные панели можно формировать
+                        из множества блокоа div , или при помощи списков
+                    </li>
+                    <li>Пишем тег nav</li>
+                    <li> создаём список ul </li>
+                    <li>создаём li*2</li>
+                    <li>Подписываеи li </li>
+                    <li>Создаём ещё блок nav (в нём создаются списки)</li>
+                    <li><span>Списки блочные и будут распологаться друг за другом. Чтобы изменить это - НАДО ИЗМЕНИТЬ
+                            ТИП div c блочного на display: flex; !flex- по умолчанию распологает все элементы по
+                            горизонтали(rov) . Изначально создав ему класс nav-conteiner
+
+                        </span> Раздвигаем списки с помощью justify-content: space-between;-чтоб расположить всё
+                        свободное пространство между ними ( раздвинуть по левому и правому углу) </li>
+                    <li>Поле для ввода надо расположить тоже в списке с помощью input type="text"- в интернете много
+                        информации как сделать активной с помощью js. </li>
+                    <li>В теге input написать атребут plaseholder=""- информация которая отображается в поле для
+                        ввода(поиска)-подсказка для пользователя
+                        <p>
+                            Чтоб не растягивался input по ширине в ul добавляем выравнивание по центру в строке
+                            .nav-conteiner>nav>ul {align-items: center;}
+                        </p>
+                    </li>
+                    <li><span>Поскольку все ссылки (кнопки) распологаются вертикально их необходимо расположить
+                            горизонтально, для этого необходимо из списков ul сделать flex контейнеры.</span> Через
+                        систему наследования nav-conteiner>nav>ul{
+                        display: flex;
+                        }
+                        <p>
+                            -Чтобы убрать со списков точки и немного их расширить -list-style: none;
+                        </p>
+                        <p>-Чтоб пункты тоесть сылки (li и а ) отбражались в виде кнопок ( чтобы небыло подчёркивания),
+                            из строчного тега сделать блочный- выделить плоскость потому что <span>высота и ширина для
+                                строчных тегов не применяется они его игнорируют</span> . По принцыпу наследования
+                            nav-conteiner>nav>ul>li>a {
+                            display: block;
+                            padding: 10px;
+                            border-style: solid;
+                            border-width: 0.5px;
+                            }
+                        <p>Лучше обнулить у кнопок margin и padding - чтоб кнопки были без отступов ( в инспекторе можно
+                            посмотреть свойства и увидеть что браузер по умолчаю установил для первых ul меняем это
+                            обнуляя.margin: 0;
+                            padding: 0; </p>
+                        <p>
+                            Увидим что есть зазор, он берётся из параметров установленных браузером для body , тоже
+                            обнуляем, чтоб навигационная панель начиналась с самого верха
+                        </p>
+                        </p>
+                    </li>
+                    <li>При сжатии экрана манитора , часть кнопок навигационной понели будет прятаться, это необходимо
+                        изменить!
+                        <p>
+
+                        </p>
+                    </li>
+
+                </ol>
+                <h5>Относительные велечины можно указыввать : в px , % от родительского контейнера , em = величине
+                    шрифта документа ( или контейнера в котором оно есть )- браузер очень часто ставит это значение по
+                    умолчанию </h5>
+                <span>
+                    em- часто используется такое отображение, для того чтоб синхнонно на разных браузерах отображалось
+                    размер шрифта и отступы!
+                </span>
+                <h4>Медиазапросы 2:39:10- Отображение контента - стили из файла css применяются разные в зависимости от
+                    ширины экрана</h4>
+                <p>
+                    <span>
+                        @media (max-width: )- если погуглить "медиазапросы css" то есть таблица , там есть размеры
+                        каждого устойства.
+                    </span>
+                    Можно использовать любую размерность, напимер надо что как только кнопки пытаются соприкосаться ,
+                    второй блок нопок надо чтоб переносился на следующую строку. К примеру запишим что
+                    <span>максимальная ширина 900px- это значит что для разрешений экранов от 1-900px будут применяться
+                        стили которые написанны в медиазапросе. Как только 901 px будут приманяться стили написанные в
+                        другом месте. </span>
+                    В скобках описываем к кому применияем какие свойства. надо чтоб кнопки при соприкосновении
+                    переходили на другую строку образовуя столбец flex-direction: column;( они самостоятельно прилипнут
+                    к левому краю и станут в ряд)
+                <p>
+                    В скобках описываем к кому применияем какие свойства. надо чтоб кнопки при соприкосновении
+                    переходили на другую строку образовуя столбец flex-direction: column;( они самостоятельно прилипнут
+                    к левому краю и станут в ряд)
+                    В скобках описываем к кому применияем какие свойства. надо чтоб кнопки при соприкосновении
+                    переходили на другую строку образовуя столбец flex-direction: column;( они самостоятельно прилипнут
+                    к левому краю и станут в ряд)</p>
+                <p>@media (max-width: 900px) {
+                    .nav-conteiner {
+                    flex-direction: column;
+                    }
+                    }</p>
+                </p>
+
+
+
+
+                <div>Создаём контейнер
+                    <h1>metaPermanent</h1>
+                    <div class="img-conteiner">
+
+                        <img src="static/images/лого.PNG" alt="Картинка логотип hyper school">
+                    </div>
+
+
+                    <p>Обращаемся к картинке через свойство float- оно меняет поведение отображения элемента настранице
+                        (как и
+                        свойство display).Часто этим свойством играть нельзя , в flex-контейнерах оно вообще не работает
+                        (может не работать пока не разместить объект в div), но когда
+                        оно находится в блочном div можно выставить расположение например:float: right;.Браузер читая
+                        документ сверху вних , выдернит элемент благодаря этому свойству и разместит там где
+                        указали.Текст будет обтекать картинку.
+                    </p>
+                    <p>Помещаем картинку в тег div и лучше его сделать плавающим, дадим ему класс img-conteiner назначим
+                        свойство float: right;= этот контейнер разместится сбоку его будет обтекать текст.</p>
+                    <p>div со свойством float начинает вести себя как инлайновый</p>
+                    <img src="static/images/IMG_0505.PNG" alt="Картинка лого">
+
+
+                    <p>
+                        1-й день. Это был день полный ожиданий что после того как я повешу
+                        объявления люди побегут и выстроятся в очереди или что телефон будет
+                        звонить без умолку. Я повесила объявления на рынке (на двери склада,
+                        который находится посреди базара, при выходе с рынка на углу здания , чтоб
+                        люди идущие по дорожке вдоль рынка видели, клеяла я на уровне глаз, чтоб
+                        было болльше шансов увидет), повесила объявление на двери салона - люди
+                        стоящие на остановки от безделия должны были прочесть. Повесила всего 4
+                        объявления , очень стыдно было их клеить. решила больше не вешатьчтоб
+                        небыло слишком много звонков. Но никто так и не позвонил. В салоне в этот
+                        день я решила не терять время и пол дня набивала руку на латэксе. Вечером
+                        насноение потухло, и было грустно , я понимала что что-то не сработало и
+                        надо двигаться дальше и что-то делать, клеить больше или вид рекламы
+                        поменять. В глубине души я понимала, что просто так ничего не бывает и
+                        надо попытаться раслабиться и навести порядок в мыслях.
+                    </p>
+                    <p>
+                        2-й день. Я проснулась разбитой и решила взять блокнот и выписать
+                        последовательность своих действий , приоритетов и вообще как-то себя
+                        поддержать. В глубине я чувствовала , что клиентов будет много иначе быть
+                        не может, просто надо время. Решила дать рекламму на олх. Поскольку я
+                        вечно забываю пароли и постоянно их меняю , получить доступ к олх было не
+                        легко, но с помощью аккаунта доченьки всё удалось , в целом я ним
+                        провозилась часа 2. Там же я нашла контактный телефон листовочника, и
+                        решила сделать рекламму, чтоб ещё раздали листовки, посмотреть
+                        эффективность их. Поздно ночью я сидела и составляла макет, анализировала
+                        какие фото- ведь надо учесть кто будет читать (а читать будут женьщины на
+                        базаре), анализировала что написать, что должно бвосится в глаза в 12 я
+                        закончила макет.
+                    </p>
+                    <p>
+                        3-й день. Позвонила 1-я клиентка, она хотела маму записать. я ей столько
+                        всего наговорила и про процессы и даже что ресницы делала и почему дёшево.
+                        Это был перебор. Когда позвонила её мама , аналогично с меня просто лился
+                        поток информации и текста, слишко много на эмоциях. надо обдумывать что
+                        отвечать и прописать.
+                    </p>
+                    <!-- Текст создания сайта вступление : горячие клавиши, пробелы,  -->
+                    <p>
+                        Язык XHTML является более строгим вариантом HTML, он следует синтаксису
+                        XML и является приложением языка XML в области разметки гипертекста.
+                    </p>
+                    <p>
+                        Чтобы форматировать текст: надо правой клавишей мыши щёлкнуть в любом месте , появится вверху
+                        выбор через
+                        какое расширение,
+                        автор часто выбирает с помощью html поскольку надо когда много текста сохранять больше пробелов
+                        для
+                        читабельности. Можно с помощью prittyer.
+                    </p>
+                    <p>Открыть в гугле можно через : правой клавишей и выбрать открыть с помощью Хром</p>
+                    <p>Писать теги быстро - написать тег+нажать tab</p>
+                    <p>Комментарии писать-Ctrl и слэш что на кнопке с точкой находится.Можно писать для себя заметки или
+                        просто
+                        брать блок кода - делать не видимым или нечитаемым ( чтоб посмотреть как будет смотреться сайт
+                        без него) -
+                        для этого кликнуть курсором рядом- весь тег закоментируется.Раскоментировать - аналогичное
+                        действие</p>
+                    <p>
+                        <span>Чтоб выделять декст (курсивом или шрифтом) применяют тег-span. <span>Чтобы выделить в
+                                блоке элемент:
+                                надо поставить в начале 2 пробела перед точкой , затем написать span + Tab,
+                                (Command)Ctrl+x вырезаем
+                                второй span, Ctrl+V вставит куда надо</span>Span -это тоже контейнер. CSS создаёт
+                            оформление этим
+                            блокам. </span>
+                    <p>Каскадные таблицы стилей - почему так называют? И как подключать- способы подключения?
+                    <ol>
+                        <li>В строке выделили в блок тегом и сразу там печатем: span style="печатаем какой стиль шрифта
+                            хотим
+                            применить например <span style="font-style: italic;">font-style: italic;"</span></li>
+                        <li>В теге head написать тег style и в нём обратиться к теу span: в <span>head_ style _span
+                            </span>{пишим
+                            семейство шрифтов например: font-style: italic;}/style</li>
+                        <!-- Подключение стилей через css -->
+                        <li>Самый правильный способ -Отдельно выносить файл.Чтобы подключить файл css надо в head
+                            написать тег
+                            link(в выпадающем меню подсказок выбрать :css), автоматически подставятся атребуты.
+                            rel="stylesheet"-указывает что это таблицы стилей, в href- указывает ссылку на стили,(потому
+                            что
+                            браузеру не важно как получить доступ к этому файлу, когда он начнёт читать документ он
+                            увидит атребут
+                            href и путь к этому файлу). Путь может быть указан в папке или реальный адресс https на
+                            сервере ,
+                            браузеру всёравно.Он находится в папке static и тд. В href="печатаем адрес
+                            static/styles/style.css"-будет подсказывать путь .
+                            <ol>
+                                <li>Открываем explorer и там правильно организовываем папки. css файлы не принято
+                                    бросать рядом с
+                                    html документами , поэтому надо перейти на рабочем столе в папку и создать в ней
+                                    рядом . Или
+                                    можно делать это сразу в редакторе.В редакторе вверху кнопка создать новый файл,
+                                    затем создать
+                                    нговую папку . Кликаем и называем (ststic, source,public и тд.б зависит от
+                                    дальнейшей судьбы
+                                    проекта. Пока это не важно)Дадим имя static- статичные файлы, которые используются
+                                    для
+                                    изображения на сайте. </li>
+                                <li> В этой папке создаём ещё оду папку, назовём её styles.В ней будем хранить файлы
+                                    css.</li>
+                                <li>В ней создаём ещё папку images(в ней будут храниться картинки), fonts(будет хранить
+                                    шрифты ).И
+                                    т.д.</li>
+                                <li>Выбираем папку style и уже там нажимаем создать новый файл и называем его style.css.
+                                    Редактор
+                                    открывает его в новом окне.</li>
+                                <li>Чтобы удобно было работать explorer закрываем.Вверху в впаром углу есть кнопка split
+                                    - похожа на
+                                    окно. Её нажимаем и разделяем редактор на 2 окна. Через меню Вид (view) можно
+                                    настраивать
+                                    миникарту, кол-во сток или столбцов.</li>
+                            </ol>
+                        </li>
+
+                    </ol>
+                    <p>Каскадная таблица стилей- имеет иерархию ( приоритетность стиля), тоесть стиль в файле может
+                        поменять (
+                        перекрыть ) стиль прописанный в head , самый главный стиль будет прописан непосредственно в
+                        самом теге.
+                        Стиль ,что ближе к тегу , перекрывает другие стили. </p>
+                    </p>
+                    <p>Чтобы не перегружать стилями страницу назначают <span class="bold-text">классы ( идентификаторы)
+                        </span>для
+                        тегов, чтоб легче применять было к разным объектам стили. Название классов пишется через <span
+                            class="bold-text">разделитель -тире</span></p>
+                    <!-- Cылки 
+                        <a href="ссылка на интересующую страницу" Текст или Картинка</a>
+                        -->
+                    <p><a href="#">Ссылка</a>: поставить <a href="https://www.youtube.com/watch?v=Bmtu5eNnjK8"
+                            target="_blank">заглушку # </a>(решётку).Сылка будет открываться в той же вкладке. <span
+                            class="bold-text">Чтобы ссылка открывалась в новой вкладке необходимо дописать атребут
+                            target="_blank"
+                        </span>. Чтобы не писать вручную каждый раз вручную ссылки, можно настроить горячие клавиши.</p>
+                    <!-- Настройк горячих кнопок -->
+                    <p>
+                        <a href="page.html">Настройка горячих кнопок</a>. Настройки->Ctrl+K Ctrl+S (Настройка клавишей),
+                        в поиске
+                        чтоб не искать пишем wrap (обертка)+нажимаем enter -> пишим Control(alt)+W-> Теперь выделив текс
+                        и нажав
+                        Control+W появится всплывающее окно->нажмём тег а и всё обернёться в тег а .
+                    <p><span>Множественное выделение</span>= выделили слово <span>зажали кнопку option(alt)</span> ->
+                        <span>выделили
+                            новое слово</span>-> зажали Option +выделили новое слово.</p>
+                    <p>
+                        Проставлять заглушки легко с помощью множественного выделения. Поставив курсор выделить, зажать
+                        Option
+                        поставить курсор в нужное место, выбрав другие места также , зажав Option тыкнуть курсор=
+                        проставлять
+                        заглушки.
+                    </p>
+                    <p>
+                        Как сделать ссылку на вторую свою станицу? Например рядом с index.html создаёте другой какой-то
+                        файл
+                        например page.html. потом на основной странице в href="вписать путь page.html". Если надо чтоб
+                        открывался в
+                        новой вкладке , то дописать атребут target="_blank"
+                    </p>
+                    </p>
+                    </p>
+                    <h2>Списки</h2>
+                    <div class="list-conteiner">
+                        <p>Виды списков
+                        </p>
+                        <p>Чтобы поместить в рамочку списки создаём новый div->Выделяем весь список->дадим
+                            class=list-conteiner->в
+                            свойстве
+                            cssобращаемся к нему-> в css указать border-style: solid;->Чтоб шириной небыл на весь экран
+                            ,а по
+                            содержимому display;
+                            inline-block</p>
+                        <p>-Чтоб надписи(пункты меню) стали ссылками : выделяем их все -зажимаем alt и так следующую и
+                            тд-> набераем
+                            комбинацию Alt+w (control+w)(сверху будет поле какой тег надо ввести всем выделенным
+                            объектам)-> вводим
+                            тег a->проставляем заглушки-></p>
+                        <ol>
+                            <li>
+                                <p><a href="#">ol-нумерованные</a></p>
+                            </li>
+                            <li>
+                                <p><a href="#">ul- не нумерованные</a></p>
+                                <ol>
+                                    <li>встаём в конец слова перед закрывающим тегом li -> делаем перенос строки
+                                        ->создаёем тег ol ,
+                                        затем в нем создаём li</li>
+                                </ol>
+
+
+                        </ol>
+
+                    </div>
+
+                    <p>Чтоб раскопировать -поставить пробел в конце строки -нажать Ctrl+C на другой строке Ctrl+V</p>
+
+
+                    <h2>Картинка</h2>
+
+
+
+                    <p>Обращаемся к картинке через свойство float- оно меняет поведение отображения элемента настранице
+                        (как и
+                        свойство display).Часто этим свойством играть нельзя , в flex-контейнерах оно вообще не работает
+                        (может не работать
+                        <img src="static/images/лого.PNG" alt="Картинка лого">
+                        пока не разместить объект в div), но когда
+                        оно находится в блочном div можно выставить расположение например:float: right;.Браузер читая
+                        документ сверху вних ,
+                        выдернит элемент благодаря этому свойству и разместит там где указали.Текст будет обтекать
+                        картинку.
+                    </p>
+                    <p>Помещаем картинку в тег div и лучше его сделать плавающим, дадим ему класс img-conteiner назначим
+                        свойство float:
+                        right;= этот контейнер разместится сбоку его будет обтекать текст.</p>
+                    <div class="img-conteiner">
+                        <div>
+                            <p>
+                                Чтоб расположить картинки вертикально:img-conteiner>div {
+                                display: flex;
+                                flex-direction: column;)
+                            </p>
+                            <img class="logo-school"
+                                src="data:image/jpeg;base64,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"
+                                alt="Картинка ссылка на инстаграмм">
+                            <img src="static/images/лого.PNG" alt="Картинка логотип hyper school">
+
+                            <p>
+                                Чтоб отцентровать элементы jastify-content: centr;- Не сработает! <span>Когда
+                                    используется column надо использовать align-items: center; </span>
+                            </p>
+                        </div>
+                    </div>
+                    <p>div со свойством float начинает вести себя как инлайновый</p>
+                    <p>img-не имеет закрывающего тега!</p>
+                    <p>Чтобы разместить картинку необходимо написать img + tab= img src=" тут размещаем путь к
+                        картинке(ссылка- если
+                        на сервере находится ; или путь до файла проекта)" alt="альтернативный вариант=краткое описание,
+                        поисковые
+                        роботы ориентируются на краткое описание картинок выдавая сайты по запросам". <span>Картинки
+                            расположатся одна за другой - как сточные элементы. Чтобы это поменять-> прописываем ещё
+                            один div , картинки помещаем в него.( поскольку div находится в float элементе он не
+                            расширяется-> надо поменять его на тип flex( запись делаем по иерархии чтоб не вводить
+                            лишних классов(перизбытка имён)-помним про каскадность->img-conteiner>div d нем прописываем
+                            display: flex;
+                            flex-direction: column; )</span></p>
+                    <p> Чтобы взять картинку в рамку с отступом, обращаемся к контейнеру img-conteiner и применяем
+                        внутренний отступ -5 padding: 5px;; вид рамкиborder-style: solid; и ширину 0.5px border-width:
+                        0.5px;Сделаем внешний отступ с левой стороны больше.</p>
+                    <p> Чтобы разиестить ещё один элемент в рамке заходим на страницу откуда хотим скачать копируем url
+                        переходим в наш редактор и вставляем в img адрес url(скопировать адресс можно щёлкнув правой
+                        клавишей мышки или через поиск в гугл и скачать адресс в поиске). Если хотим обратиться к
+                        картинке даём ей класс имя logo-school, устанавливаем ширину-max-width: 70px; </p>
+
+
+                    <h3> Позиционирование</h3>
+                    <p>Чтоб разобраться надо: всё закрыть, перейти в папку на рабочем столе создать копию папки proj1 и
+                        переименовать в block inline-block</p>
+
+
+
+
+                </div>
+                <div>
+
+                    <h3>Ссылки</h3>
+                    <div>
+                        <p>Если хотим сделать на сайте все ссылки без нижнего подчеркивания то надо обратиться к множиству тегов а что есть на странице.</p>
+                        <p>
+                            <span>Чтоб не пачкать css стиль можно обратиться к тегам а в теге head. style 
+                                a {
+                                    text-decoration: none;
+                                }
+                            /style-</span> - но помним , что нижнее подчёркивание ссылок влияет на кликабельность и переходы по ним , это доказанно статистикой! Рекомендованно оставлять подчёркивание. 
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+        </div>
+</body>
+</div>
+
+</html>
