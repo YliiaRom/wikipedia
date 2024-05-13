@@ -1,0 +1,137 @@
+/* Не забывать делать себе пометки что к чему относится  */
+/* ctrl+/ (com+/) */
+body {
+    margin: 0;
+    padding: 0;
+}
+/*Контент*/
+.text-page {
+    padding-left: 15px;
+}
+
+span {
+    font-style: italic;
+    background-color: rgba(105, 91, 91, 0.471);
+    color: aliceblue;
+}
+.bolt-text {
+    font-weight: bold;
+}
+.img {
+    float: right;
+}
+.img-conteiner {
+    float: right;
+    border-style: solid;
+    border-width: 0.5px;
+    padding: 5px;
+    margin-left: 10px;
+}
+.img-conteiner>div {
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-conteiner>div>p {
+    max-width: 200px;
+}
+
+.logo-school {
+    width: 30px;
+}
+
+
+ol {
+    list-style: upper-latin;
+}
+
+
+
+ol ol {
+    list-style: lower-greek;
+}
+img {
+    width: 70px;
+}
+.list-conteiner {
+    display: inline-block;
+    border-style: solid;
+    border-width: 0.5px;
+    padding-right: 20px;
+}
+.list-conteiner>p {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Верхняя навигацонная  панель */
+
+.nav-conteiner{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(231, 217, 200);
+}
+
+.nav-conteiner>nav>ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav-conteiner>nav>ul>li>a {
+    display: block;
+    padding: 10px;
+    border-style: solid;
+    border-width: 0.5px;
+}
+
+/*Медиазапросы */
+
+@media (max-width: 900px) {
+    .nav-conteiner {
+        flex-direction: column;
+    }
+}
+
+/*боковая панель*/ 
+.div-complite {
+    width: 250px;
+}
+.header {
+    width: 14%;
+    background: rgb(226, 226, 241);
+}
+.section {
+    background: #f7efef;
+    width: 82%;
+
+}
+.page {
+    display: flex;
+    justify-content: center;
+}
+
+
+.header>div>ol {
+    list-style: none;
+    border-bottom-style: solid;
+    border-width: 0.5px;
+    margin: 10px;
+    padding: 0;
+    padding-bottom: 10px;
+}
+.header>div>div {
+    width: 100%;
+}
+
+
+.header>div>div>img {
+    width: 100%;
+}
+
+
